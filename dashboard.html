@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <!-- Boxicons CDN Link -->
+     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class="logo"><img src="logo.png"></i>
+      <span class="logo_name">Performance Tracker</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">My Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="add.html">
+            <i class='bx bx-plus-circle'></i>
+            <span class="links_name">Add Online Judge</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="pat.html">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <div class="profile-details">
+        <span class="admin_name">Varkuti Shreya</span>
+      </div>
+    </nav>
+    <div class="home-content">
+      <div class="dashboard">
+        <div class="recent-score box">
+          <div class="title">Your Performance</div>
+          <div class="score-details">
+          <ul class="details">
+            <li class="topic">CodeChef</li>
+            <li><a href="#">987</a></li>
+          </ul>
+          <ul class="details">
+            <li class="topic">CodeForces</li>
+            <li><a href="#">530</a></li>
+          </ul>
+          <ul class="details">
+            <li class="topic">Spoj</li>
+            <li><a href="#">140</a></li>
+          </ul>
+           <ul class="details">
+            <li class="topic">Overall Score</li>
+            <li><a href="#">1657</a></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home-content">
+      <div class="dashboard">
+        <div class="recent-score box">
+          <div class="title">Over All Performance</div>
+          <div class="score-details">
+             <ul class="details">
+            <li class="topic">RollNumber</li>
+            <li><a href="#">18881A12B9</a></li>
+            <li><a href="#">18881A05J2</a></li>
+          </ul>
+          <ul class="details">
+            <li class="topic">CodeChef</li>
+            <li><a href="#">987</a></li>
+            <li><a href="#">640</a></li>
+          </ul>
+          <ul class="details">
+            <li class="topic">CodeForces</li>
+            <li><a href="#">530</a></li>
+            <li><a href="#">610</a></li>
+          </ul>
+          <ul class="details">
+            <li class="topic">Spoj</li>
+            <li><a href="#">140</a></li>
+            <li><a href="#">740</a></li>
+          </ul>
+           <ul class="details">
+            <li class="topic">Overall Score</li>
+            <li><a href="#">1657</a></li>
+            <li><a href="#">1990</a></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+
+</body>
+</html>

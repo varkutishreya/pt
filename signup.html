@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Performance Tracker</title>
+  <link rel="stylesheet" type="text/css" href="signup.css">
+</head>
+<body>
+  <button class="close" id="cancel" onClick="window.location.href='pat.html'">&times;</button>
+  <div class="container">
+  <h1><span>Register</span></h1>
+  <div class="col-lg-12">
+    <form class="clearfix" method="POST" action="register.php">
+      <div class="col-lg-6">
+        <table width="100%">
+          <tbody>
+            <tr>
+              <td><span><center>Please fill this form to create an account.</center></span></td>
+            </tr>
+            <tr>
+              <td>
+                Name
+                <label>*</label>
+                <br>
+                <input type="text" name="name" id="name" onblur="validname()" Required><br>
+                <span id="t0"></span>
+              </td>
+            </tr>
+             <tr>
+               <td>
+                RollNumber
+                <label>*</label>
+                <br>
+                <input type="text" name="rollno" id="rollno" onblur="validrno()" Required><br>
+                <span id="t1"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Email Address
+                <label>*</label>
+                <br>
+                <input type="text" name="email" id="email" onblur="validmail()" Required><br>
+                <span id="t2"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Password
+                <label>*</label>
+                <br>
+                <input type="password" name="password" id="password" onblur="validpass()" Required><br>
+                <br>
+                <span>Password must contain one UpperCase and one Special Character of length 8-10</span><br>
+                <span id="t3"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Re-enter Password
+                <label>*</label>
+                <br>
+                <input type="password" name="repassword" id="repassword" onblur="validrepass()" Required><br>
+                <span id="t4"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Branch
+                <label>*</label>
+                <br>
+                <select id="branch" name="branch" Required>
+                  <option id="selectHeader">--------- Select Branch --------------</option>
+                  <option value="IT"> Information Technology</option>
+                  <option value="CSE">Computer Science Engineering</option>
+                  <option value="ECE">Electronics and Communication Engineering</option>
+                  <option value="EEE">Electrical and Electronics Engineering</option>
+                  <option value="Civil">Civil Engineering</option>
+                  <option value="Mech">Mechanical Engineering</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Year of Passing
+                <label>*</label>
+                <br>
+                <input type="number" name="year" id="year" onblur="validyear()" Required><br>
+                <span id="t5"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                CodeChef Username
+                <label>*</label>
+                <br>
+                <input type="text" name="codechef" id="chefname" Required>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                CodeForces Username
+                <label>*</label>
+                <br>
+                <input type="text" name="codeforces" id="forcesname" Required>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Spoj Username
+                <label>*</label>
+                <br>
+                <input type="text" name="spoj" id="spojname" Required>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <center><button class="buttonsign" type="submit" name="submit">SignUp</button></center>
+      </div>
+    </form>
+  </div>
+</div>
+<script>
+function validname()
+{
+     var uname= document.getElementById("name").value;
+     var u= new RegExp("^[A-Z][a-zA-Z]{5,100}");
+ if(u.test(uname))
+{
+  document.getElementById("t0").style="color:green";
+ document.getElementById("t0").innerHTML="Valid Name";
+ document.getElementById("rollno").disabled=false;
+}
+else
+{
+ document.getElementById("t0").style="color:red";
+ document.getElementById("t0").innerHTML="Invalid Name";
+}
+} 
+function validrno()
+{
+     var urno= document.getElementById("rollno").value;
+     var r= new RegExp("[0-9A-Z][10]");
+ if(r.test(urno))
+{
+  document.getElementById("t1").style="color:green";
+ document.getElementById("t1").innerHTML="Valid RollNumber";
+ document.getElementById("email").disabled=false;
+}
+else
+{
+ document.getElementById("t1").style="color:red";
+ document.getElementById("t1").innerHTML="Invalid RollNumber";
+}
+} 
+function validmail()
+{
+ var mail=document.getElementById("email").value;
+var m= new RegExp("^[a-z][0-9a-z_]+[@](vardhaman)[.](org)");
+ if(m.test(mail))
+{
+  document.getElementById("t2").style="color:green";
+ document.getElementById("t2").innerHTML="Valid Mail";
+ document.getElementById("password").disabled=false;
+}
+else
+{
+ document.getElementById("t2").style="color:red";
+document.getElementById("t2").innerHTML="Invalid Mail";
+}
+} 
+function validpass()
+{
+ var pa=document.getElementById("password").value;
+var p= new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@%$#_])(?=.{8})");
+ if(p.test(pa))
+{
+  document.getElementById("t3").style="color:green";
+ document.getElementById("t3").innerHTML="Valid Password";
+ document.getElementById("t3").disabled=false;
+}
+else
+{
+ document.getElementById("t3").style="color:red";
+document.getElementById("t3").innerHTML="Invalid Password";
+}
+}
+function validrepass()
+{
+ var pa=document.getElementById("password").value;
+ var paa=document.getElementById("repassword").value;
+ if(pa==paa)
+{
+  document.getElementById("t4").style="color:green";
+ document.getElementById("t4").innerHTML="correct";
+ document.getElementById("t4").disabled=false;
+}
+else
+{
+ document.getElementById("t4").style="color:red";
+document.getElementById("t4").innerHTML="password did not match please try again";
+}
+}
+function validyear()
+{
+ var yr=document.getElementById("year").value;
+var y= new RegExp("(?:(?:20)[0-9]{2})");
+ if(y.test(yr))
+{
+  document.getElementById("t5").style="color:green";
+ document.getElementById("t5").innerHTML="Valid Year";
+ document.getElementById("t5").disabled=false;
+}
+else
+{
+ document.getElementById("t5").style="color:red";
+document.getElementById("t5").innerHTML="Invalid Year";
+}
+}   
+</script>
+</body>
+</html>

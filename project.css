@@ -1,0 +1,139 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+/*---navigationBar---*/
+#nav-bar
+{
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+.navbar-brand img
+{
+   height: 60px;
+   padding-left: 30px;
+}
+.navbar-nav li
+{
+	padding: 0 10px;
+}
+.navbar-nav li a{
+	float: right;
+	text-align: left;
+}
+.navbar
+{
+	background: #ADD8E6;
+}
+a:hover{
+	color: #007675;
+}
+.navbar-toggler
+{
+	border: none!important;
+}
+.nav-link
+{
+	color: #555!important;
+	font-weight: 600;
+	font-size: 16px;
+}
+.container{
+	padding: 16px;
+}
+.container button[type="submit"]{
+	float: right;
+    background-color: white;
+    color: black;
+    padding: 5px 5px;
+    font-size: 10px;
+    cursor: pointer;
+    margin-left: 5px;
+    border: 2px solid black;
+}
+.container button[type="submit"]{
+	border-color: #2196F3;
+  color: dodgerblue;
+}
+.container button[type="submit"]:hover {
+  background: #2196F3;
+  color: white;
+}
+/*----SignUp---*/
+/* Full-width input fields */
+.sign input[type=text], .sign input[type=password], .sign input[type=number] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.sign input[type=text]:focus, .sign input[type=password]:focus, .sign input[type=number]{
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+.sign button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.sign button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.sign {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+#branch{
+	width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+ }
