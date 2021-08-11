@@ -46,7 +46,7 @@ if (isset($_POST["submit"])) {
   
     $result=mysqli_query($con,$sql);  
     if($result){  
-       header("Location:pat.html");
+       header("Location:index.html");
        exit(); 
     } 
     else {  

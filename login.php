@@ -3,7 +3,7 @@ $rollno= $password = $dbrollno=$dbpassword="";
 if (isset($_POST["submit"])) {
     $rollno = test_input($_POST["rollno"]);
     $password=test_input($_POST["password"]);
-    
+
 
   $con=mysqli_connect('localhost','root','root','user_registration') or die(mysqli_error());  
     //smysqli_select_db() or die("cannot select DB");    
@@ -21,7 +21,7 @@ if (isset($_POST["submit"])) {
       header("Location: dashboard.html");
      }
      else{
-      header("Location: pat.html");
+      header("Location: index.html");
      } 
 }
 
